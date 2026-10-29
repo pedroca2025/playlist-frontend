@@ -13,6 +13,7 @@ export default function CadastroPage(){
     async function cadastrar(e:React.FormEvent) {
         e.preventDefault()
         const musica:Musica = {titulo,artista,album,ano: Number(ano)}
+        await musicaService.cadastrar(musica)
     }
 
 
@@ -29,19 +30,19 @@ export default function CadastroPage(){
 
             <input 
             placeholder="artista" 
-            value={titulo} 
+            value={artista} 
             onChange={(e)=>setArtista(e.target.value)}
             className="border border-gray-300 p-2 w-full rounded"/>
 
             <input 
             placeholder="album" 
-            value={titulo} 
+            value={album} 
             onChange={(e)=>setAlbum(e.target.value)}
             className="border border-gray-300 p-2 w-full rounded"/>
 
             <input 
             placeholder="ano" 
-            value={titulo} 
+            value={ano} 
             onChange={(e)=>setAno(e.target.value)}
             className="border border-gray-300 p-2 w-full rounded"/>
 
