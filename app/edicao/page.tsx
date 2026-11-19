@@ -95,16 +95,17 @@ return (
 
             <input
                 required
-                type="number"
-                min="1"
-                max={new Date().getFullYear()}
                 placeholder="Ano"
                 value={ano}
                 onChange={(e) => setAno(e.target.value)}
                 className="border border-gray-300 p-2 w-full rounded"
             />
-
-            
+            <button type="submit">
+                Salvar
+            </button>
+            <p>
+            {mensagem}
+            </p>
         
         </form>
     </main>
