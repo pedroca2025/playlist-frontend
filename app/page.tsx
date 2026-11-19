@@ -70,8 +70,15 @@ return(
               <td>{m.album}</td>
               <td>{m.ano}</td>
               <td>
-                <button onClick={()=>editar}></button>
-                <button onClick={()=>excluir}></button> 
+                <button onClick={()=>editar(m.id)}
+                type="submit"
+                className="flex-1 bg-indigo-600 hover:bg-indigo-300 m-2 text-white font-semibold rounded-lg px-4 py-2 transition disabel:opacity-50"                
+                >Editar</button>
+                
+                <button onClick={()=>excluir(m.id)}
+                  className="flex-1 bg-red-600 hover:bg-red-300 m-2 text-white font-semibold rounded-lg px-4 py-2 transition disabel:opacity-50"
+                  
+                  >Excluir</button> 
               </td>
               </tr>
           ))}
